@@ -85,7 +85,9 @@ A RESTful API for managing tasks, built with NestJS, TypeScript, PostgreSQL, and
    ```
 
 <!-- ![Postman Screenshot](postman_screenshot.png) -->
-<img src="postman_screenshot.png" alt="Postman Screenshot" width="80%" align="right">
+<p align="center">
+  <img src="postman_screenshot.png" alt="Postman Screenshot" width="80%">
+</p>
 
 ## Project Structure
 
