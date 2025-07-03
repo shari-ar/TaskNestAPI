@@ -19,8 +19,8 @@ A RESTful API for managing tasks, built with NestJS, TypeScript, PostgreSQL, and
 ## Setup Instructions
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/username/nestjs-task-api.git
-   cd nestjs-task-api
+   git clone https://github.com/shari-ar/TaskNestAPI.git
+   cd TaskNestAPI
    ```
 
 2. **Install dependencies**:
@@ -74,11 +74,10 @@ A RESTful API for managing tasks, built with NestJS, TypeScript, PostgreSQL, and
    ```
 
 ![Postman Screenshot](postman_screenshot.png)
-*Note: Replace `postman_screenshot.png` with an actual screenshot of your Postman request.*
 
 ## Project Structure
 ```
-nestjs-task-api/
+TaskNestAPI/
 ├── src/
 │   ├── tasks/
 │   │   ├── tasks.controller.ts
