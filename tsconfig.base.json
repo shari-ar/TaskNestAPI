@@ -1,8 +1,10 @@
 {
+  "exclude": ["node_modules", "test", "dist", "**/*spec.ts"],
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "node",
+    "sourceMap": true,
     "outDir": "./dist",
     "types": ["node"],
     "baseUrl": "./",
@@ -30,14 +32,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "allowUnusedLabels": false,
-    "exactOptionalPropertyTypes": true,
-
-    // Clean output
-    "removeComments": true,
-
-    // // Dev-specific (not for production)
-    // "sourceMap": true,
-    // "incremental": true,
-    // "skipLibCheck": false
+    "exactOptionalPropertyTypes": true
   }
 }
