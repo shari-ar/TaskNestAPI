@@ -35,9 +35,9 @@
     // Clean output
     "removeComments": true,
 
-    // Dev-specific (not for production)
-    "sourceMap": true,
-    "incremental": true,
-    "skipLibCheck": false
+    // // Dev-specific (not for production)
+    // "sourceMap": true,
+    // "incremental": true,
+    // "skipLibCheck": false
   }
 }
