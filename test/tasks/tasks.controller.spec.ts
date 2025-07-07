@@ -1,9 +1,9 @@
-import { Test, TestingModule } from "@nestjs/testing";
-import { TasksController } from "../../src/tasks/tasks.controller";
-import { TasksService } from "../../src/tasks/tasks.service";
-import { Task } from "../../src/tasks/entities/task.entity";
+import { Test, TestingModule } from '@nestjs/testing';
+import { TasksController } from '../../src/modules/tasks/tasks.controller';
+import { TasksService } from '../../src/modules/tasks/tasks.service';
+import { Task } from '../../src/modules/tasks/entities/task.entity';
 
-describe("TasksController", () => {
+describe('TasksController', () => {
   let controller: TasksController;
   let service: TasksService;
 
@@ -23,58 +23,58 @@ describe("TasksController", () => {
     service = module.get<TasksService>(TasksService);
   });
 
-  it("should be defined", () => {
+  it('should be defined', () => {
     expect(controller).toBeDefined();
   });
 
-  describe("findAll", () => {
-    it("should return an array of tasks", async () => {
+  describe('findAll', () => {
+    it('should return an array of tasks', async () => {
       const result: Task[] = [
         {
           id: 1,
-          title: "Test Task",
-          description: "Test Desc",
+          title: 'Test Task',
+          description: 'Test Desc',
           completed: false,
         },
       ];
-      jest.spyOn(service, "findAll").mockResolvedValue(result);
+      jest.spyOn(service, 'findAll').mockResolvedValue(result);
 
       expect(await controller.findAll()).toBe(result);
     });
   });
 
-  describe("findOne", () => {
-    it("should return a task by ID", async () => {
+  describe('findOne', () => {
+    it('should return a task by ID', async () => {
       const result: Task = {
         id: 1,
-        title: "Test Task",
-        description: "Test Desc",
+        title: 'Test Task',
+        description: 'Test Desc',
         completed: false,
       };
-      jest.spyOn(service, "findOne").mockResolvedValue(result);
+      jest.spyOn(service, 'findOne').mockResolvedValue(result);
 
-      expect(await controller.findOne("1")).toBe(result);
+      expect(await controller.findOne('1')).toBe(result);
     });
 
-    it("should throw NotFoundException if task not found", async () => {
-      jest.spyOn(service, "findOne").mockResolvedValue(null);
+    it('should throw NotFoundException if task not found', async () => {
+      jest.spyOn(service, 'findOne').mockResolvedValue(null);
 
-      await expect(controller.findOne("1")).rejects.toThrow(
-        "Task with ID 1 not found"
+      await expect(controller.findOne('1')).rejects.toThrow(
+        'Task with ID 1 not found',
       );
     });
   });
 
-  describe("create", () => {
-    it("should create a new task", async () => {
-      const createTaskDto = { title: "New Task", description: "New Desc" };
+  describe('create', () => {
+    it('should create a new task', async () => {
+      const createTaskDto = { title: 'New Task', description: 'New Desc' };
       const result: Task = {
         id: 1,
-        title: "New Task",
-        description: "New Desc",
+        title: 'New Task',
+        description: 'New Desc',
         completed: false,
       };
-      jest.spyOn(service, "create").mockResolvedValue(result);
+      jest.spyOn(service, 'create').mockResolvedValue(result);
 
       expect(await controller.create(createTaskDto)).toBe(result);
     });

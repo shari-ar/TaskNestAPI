@@ -4,8 +4,15 @@
     "target": "esnext",
     "moduleResolution": "node",
     "outDir": "./dist",
-    "baseUrl": "./",
     "types": ["node"],
+    "baseUrl": "./",
+    "paths": {
+      "@core/*": ["src/core/*"],
+      "@modules/*": ["src/modules/*"],
+      "@common/*": ["src/common/*"],
+      "@config/*": ["src/config/*"],
+      "@shared/*": ["src/shared/*"]
+    },
 
     // Decorators & modern TS support
     "emitDecoratorMetadata": true,
